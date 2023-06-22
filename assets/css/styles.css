@@ -593,8 +593,32 @@ img{
 }
 
 
-/*==================== SERVICES ====================*/
+/*==================== PUBLICATIONS ====================*/
 
+.publication-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.publication {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.publication .title {
+  font-weight: bold;
+}
+
+.publication .authors {
+  font-style: normal;
+}
+
+.publication .journal {
+  color: var(--first-color);
+  font-style: italic;
+}
 
 /* Active Modal */
 
