@@ -602,6 +602,8 @@ img{
 
 .publication {
   margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -613,6 +615,7 @@ img{
 
 .publication .authors {
   font-style: normal;
+  font-size: var(--small-font-size);
 }
 
 .publication .journal {
@@ -623,7 +626,38 @@ img{
 /* Active Modal */
 
 
-/*==================== PORTFOLIO ====================*/
+/*==================== CONFERENCES ====================*/
+.conference-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.conference {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.conference .date {
+  font-style: italic;
+}
+
+.conference .title {
+  font-weight: bold;
+}
+
+.conference .authors {
+  font-style: normal;
+  font-size: var(--small-font-size);
+}
+
+.conference .location {
+  color: var(--first-color);
+  font-style: italic;
+}
 
 
 /*==================== PROJECT IN MIND ====================*/
