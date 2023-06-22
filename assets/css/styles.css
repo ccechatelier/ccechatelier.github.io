@@ -366,8 +366,8 @@ img{
 }
 /*==================== ABOUT ====================*/
 
-.about__ing{
-  width: 200px;
+.about__img{
+  width: 400px;
   border-radius: .5rem;
   justify-self: center;
   align-self: center;
@@ -403,6 +403,10 @@ img{
 .about__buttons{
   display: flex;
   justify-content: center;
+}
+
+.about__container{
+  gap: 1rem;
 }
 /*==================== SKILLS ====================*/
 
@@ -663,9 +667,18 @@ img{
 /*==================== PROJECT IN MIND ====================*/
 
 
-/*==================== TESTIMONIAL ====================*/
+/*==================== BONUS ====================*/
 
+.bonus__img{
+  width: 400px;
+  border-radius: .5rem;
+  justify-self: center;
+  align-self: center;
+}
 
+.bonus__container{
+  gap: 1rem;
+}
 /*==================== CONTACT ME ====================*/
 
 
