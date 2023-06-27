@@ -615,14 +615,14 @@ img{
   color: var(--first-color);
 }
 
-/*==================== SERVICES ====================*/
+/*==================== publications ====================*/
 
-.services__container{
+.publications__container{
   gap: 1.5rem;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.services__content{
+.publications__content{
   position: relative;
   background-color: var(--container-color);
   padding: 3.5rem .5rem 1.25rem 1.5rem;
@@ -631,31 +631,31 @@ img{
   transition: .3s;
 }
 
-.services__content:hover{
+.publications__content:hover{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.services__icon{
+.publications__icon{
   display: block;
   font-size: 1.5rem;
   color: var(--first-color);
   margin-bottom: var(--mb-1);
 }
 
-.services__title{
+.publications__title{
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
   font-weight: var(--font-semi-bold);
 }
 
-.services__authors{
+.publications__authors{
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
   font-weight: normal;
   font-style: normal;
 }
 
-.services__journal{
+.publications__journal{
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
   font-weight: var(--font-medium);
@@ -663,17 +663,17 @@ img{
   font-style: italic;
 }
 
-.services__button{
+.publications__button{
   cursor: pointer;
   font-size: var(--small-font-size);
 }
 
 
-.services__button:hover .button__icon{
+.publications__button:hover .button__icon{
   transform: translateX(.25rem);
 }
 
-.services__modal{
+.publications__modal{
   position: fixed;
   top: 0;
   left: 0;
@@ -690,35 +690,35 @@ img{
   transition: .3s;
 }
 
-.services__modal-content{
+.publications__modal-content{
   position: relative;
   background-color: var(--container-color);
   padding: 1.5rem;
   border-radius: .5rem;
 }
 
-.services__modal-services{
+.publications__modal-publications{
   row-gap: 1rem;
 
 }
 
-.services__modal-service{
+.publications__modal-service{
   display: flex;
 }
 
-.services__modal-title{
+.publications__modal-title{
   font-size: var(--h3-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: var(--mb-1-5);
 }
 
-.services__modal-authors{
+.publications__modal-authors{
   font-size: var(--h4-font-size);
   font-weight: normal;
   margin-bottom: var(--mb-1-5);
 }
 
-.services__modal-journal{
+.publications__modal-journal{
   font-size: var(--h4-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-1-5);
@@ -726,15 +726,19 @@ img{
   color: var(--first-color);
 }
 
-.services__modal-img{
+.publications__modal-img{
   width: 400px;
   border-radius: .5rem;
-  justify-self: center;
+  /* justify-self: center;
   align-self: center;
-  display: inline;
+  display: inline; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
 }
 
-.services__modal-close{
+.publications__modal-close{
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -743,7 +747,7 @@ img{
   cursor: pointer;
 }
 
-.services__modal-icon{
+.publications__modal-icon{
   color: var(--first-color);
   margin-right: var(--mb-0-25);
 }
@@ -755,9 +759,9 @@ img{
   visibility: visible;
 }
 
-/*==================== PUBLICATIONS ====================*/
+/* ==================== PUBLICATIONS ALTERNATIVE ==================== */
 
-.publication-list {
+/* .publication-list {
   list-style-type: none;
   padding: 0;
 }
@@ -783,9 +787,7 @@ img{
 .publication .journal {
   color: var(--first-color);
   font-style: italic;
-}
-
-/* Active Modal */
+} */
 
 
 /*==================== CONFERENCES ====================*/

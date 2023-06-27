@@ -71,11 +71,11 @@ tabs.forEach(tab => {
     })
 })
 
-/*==================== SERVICES MODAL ====================*/
+/*==================== Publications MODAL ====================*/
 
-const modalViews = document.querySelectorAll('.services__modal'),
-      modalBtns = document.querySelectorAll('.services__button'),
-      modalCloses = document.querySelectorAll('.services__modal-close')
+const modalViews = document.querySelectorAll('.publications__modal'),
+      modalBtns = document.querySelectorAll('.publications__button'),
+      modalCloses = document.querySelectorAll('.publications__modal-close')
 
 let modal = function(modalClick){
     modalViews[modalClick].classList.add('active-modal') 
