@@ -615,7 +615,7 @@ img{
   color: var(--first-color);
 }
 
-/*==================== publications ====================*/
+/*==================== Publications ====================*/
 
 .publications__container{
   gap: 1.5rem;
@@ -790,8 +790,156 @@ img{
 } */
 
 
-/*==================== CONFERENCES ====================*/
-.conference-list {
+/*==================== Conferences ====================*/
+
+.conferences__container{
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.conferences__content{
+  position: relative;
+  background-color: var(--container-color);
+  padding: 3.5rem .5rem 1.25rem 1.5rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: .3s;
+}
+
+.conferences__content:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.conferences__icon{
+  display: block;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  margin-bottom: var(--mb-1);
+}
+
+.conferences__date{
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: normal;
+  font-style: italic;
+}
+
+.conferences__title{
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-semi-bold);
+}
+
+.conferences__authors{
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.conferences__location{
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
+  color: var(--first-color);
+  font-style: italic;
+}
+
+.conferences__button{
+  cursor: pointer;
+  font-size: var(--small-font-size);
+}
+
+
+.conferences__button:hover .button__icon{
+  transform: translateX(.25rem);
+}
+
+.conferences__modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+
+.conferences__modal-content{
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+.conferences__modal-conferences{
+  row-gap: 1rem;
+
+}
+
+.conferences__modal-service{
+  display: flex;
+}
+
+.conferences__modal-title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-1-5);
+}
+
+.conferences__modal-authors{
+  font-size: var(--h4-font-size);
+  font-weight: normal;
+  margin-bottom: var(--mb-1-5);
+}
+
+.conferences__modal-location{
+  font-size: var(--h4-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+  font-style: italic;
+  color: var(--first-color);
+}
+
+.conferences__modal-img{
+  width: 400px;
+  border-radius: .5rem;
+  /* justify-self: center;
+  align-self: center;
+  display: inline; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
+
+.conferences__modal-close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.conferences__modal-icon{
+  color: var(--first-color);
+  margin-right: var(--mb-0-25);
+}
+
+.active-modalc{
+  opacity: 1;
+  visibility: visible;
+}
+/*==================== CONFERENCES ALTERNATIVE ====================*/
+/* .conference-list {
   list-style-type: none;
   padding: 0;
 }
@@ -821,8 +969,7 @@ img{
 .conference .location {
   color: var(--first-color);
   font-style: italic;
-}
-
+} */
 
 /*==================== PROJECT IN MIND ====================*/
 

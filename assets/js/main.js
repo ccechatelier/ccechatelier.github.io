@@ -94,6 +94,31 @@ modalCloses.forEach((modalClose) =>{
         })
     })
 })
+
+/*==================== Conferences MODAL ====================*/
+
+const modalcViews = document.querySelectorAll('.conferences__modal'),
+      modalcBtns = document.querySelectorAll('.conferences__button'),
+      modalcCloses = document.querySelectorAll('.conferences__modal-close')
+
+let modalc = function(modalcClick){
+    modalcViews[modalcClick].classList.add('active-modalc') 
+}
+
+modalcBtns.forEach((modalcBtn, i) => {
+    modalcBtn.addEventListener('click', () => {
+        modalc(i)
+    })
+})
+
+modalcCloses.forEach((modalcClose) =>{
+    modalcClose.addEventListener('click', () =>{
+        modalcViews.forEach((modalcView) =>{
+            modalcView.classList.remove('active-modalc')
+        })
+    })
+})
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 
 
