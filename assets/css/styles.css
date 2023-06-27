@@ -137,7 +137,7 @@ img{
 
 /*==================== LAYOUT ====================*/
 .container{
-  max-width: 768px;
+  max-width: 868px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -314,7 +314,7 @@ img{
 }
 
 .home__scroll{
-  /* display: none; */
+  display: none;
 }
 
 .home__scroll-button{
@@ -625,7 +625,7 @@ img{
 .publications__content{
   position: relative;
   background-color: var(--container-color);
-  padding: 3.5rem .5rem 1.25rem 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   border-radius: .25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: .3s;
@@ -693,7 +693,7 @@ img{
 .publications__modal-content{
   position: relative;
   background-color: var(--container-color);
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   border-radius: .5rem;
 }
 
@@ -733,6 +733,7 @@ img{
   align-self: center;
   display: inline; */
   display: block;
+  /* display: none; */
   margin-left: auto;
   margin-right: auto;
   /* width: 50%; */
@@ -740,8 +741,8 @@ img{
 
 .publications__modal-close{
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.35rem;
+  right: 0.35rem;
   font-size: 1.5rem;
   color: var(--first-color);
   cursor: pointer;
@@ -769,7 +770,7 @@ img{
 .conferences__content{
   position: relative;
   background-color: var(--container-color);
-  padding: 3.5rem .5rem 1.25rem 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   border-radius: .25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: .3s;
@@ -918,7 +919,7 @@ img{
 .projects__content{
   position: relative;
   background-color: var(--container-color);
-  padding: 3.5rem .5rem 1.25rem 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   border-radius: .25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: .3s;
@@ -1213,27 +1214,125 @@ img{
   }
 
   .publications__modal-title{
-    font-size: .5rem;
+    font-size: .65rem;
   }
 
   .publications__modal-content{
-    font-size: .4rem;
+    font-size: .55rem;
   }
 
   .conferences__modal-title{
-    font-size: .5rem;
+    font-size: .65rem;
   }
 
   .conferences__modal-content{
-    font-size: .4rem;
+    font-size: .55rem;
   }
 
   .projects__modal-title{
-    font-size: .5rem;
+    font-size: .65rem;
   }
 
   .projects__modal-content{
-    font-size: .4rem;
+    font-size: .55rem;
+  }
+}
+
+@media screen and (min-width: 350px){
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  .nav__menu{
+    padding: 2rem .25rem 4rem;
+  }
+
+  .nav__list{
+    column-gap: 0;
+  }
+
+  .home__img{
+    /* order: 1; */
+    justify-self: center
+  }
+
+  .home__content{
+    grid-template-columns: .25fr 3fr;
+  }
+
+  .publications__container{
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+
+  .conferences__container{
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+
+  .publications__content{
+    padding-right: 3.5rem;
+  }
+
+  .publications__modal{
+    padding: .5rem .5rem;
+  }
+
+  .conferences__content{
+    padding-right: 3.5rem;
+  }
+
+  .conferences__modal{
+    padding: .5rem .5rem;
+  }
+
+  .home__blob{
+    width: 180px;
+  }
+
+  .skills__titles{
+    font-size: var(--normal-font-size);
+  }
+
+  .qualification__data{
+    gap: .5rem;
+  }
+
+  .publications__modal-img{
+    width: 200px;
+  }
+
+  .conferences__modal-img{
+    width: 200px;
+  }
+
+  .projects__modal-img{
+    width: 200px;
+  }
+
+  .publications__modal-title{
+    font-size: .70rem;
+  }
+
+  .publications__modal-content{
+    font-size: .60rem;
+  }
+
+  .conferences__modal-title{
+    font-size: .70rem;
+  }
+
+  .conferences__modal-content{
+    font-size: .60rem;
+  }
+
+  .projects__modal-title{
+    font-size: .70rem;
+  }
+
+  .projects__modal-content{
+    font-size: .60rem;
   }
 }
 
@@ -1285,6 +1384,11 @@ img{
   .container{
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .publications__container,
+  .conferences__container{
+    grid-template-columns: repeat(2, 1fr);
   }
 
   body{
