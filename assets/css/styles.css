@@ -1153,6 +1153,11 @@ img{
     column-gap: 0;
   }
 
+  .home__img{
+    /* order: 1; */
+    justify-self: center
+  }
+
   .home__content{
     grid-template-columns: .25fr 3fr;
   }
@@ -1252,15 +1257,26 @@ img{
   .skills__container,
   .publications__container,
   .conferences__container,
-  .projects__container,
   .footer__container{
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .projects__container{
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .qualification__sections{
     display: grid;
     grid-template-columns: .6fr;
     justify-content: center;
+  }
+
+  .home__scroll{
+    display: block;
+  }
+
+  .home__scroll-button{
+    margin-left: 3rem;
   }
 
 }
@@ -1329,6 +1345,34 @@ img{
 
   .home__blob{
     width: 270px;
+  }
+
+  .home__scroll{
+    display: block;
+  }
+
+  .home__scroll-button{
+    margin-left: 3rem;
+  }
+
+  .about__container{
+    column-gap: 5rem;
+  }
+
+  .about__img{
+    width: 350px;
+  }
+
+  .about__description{
+    text-align: initial;
+  }
+
+  .about__info{
+    justify-content: space-between;
+  }
+
+  .about__buttons{
+    justify-content: initial;
   }
 }
 
