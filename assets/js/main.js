@@ -119,6 +119,30 @@ modalcCloses.forEach((modalcClose) =>{
     })
 })
 
+/*==================== Projects MODAL ====================*/
+
+const modalpViews = document.querySelectorAll('.projects__modal'),
+      modalpBtns = document.querySelectorAll('.projects__button'),
+      modalpCloses = document.querySelectorAll('.projects__modal-close')
+
+let modalp = function(modalpClick){
+    modalpViews[modalpClick].classList.add('active-modalp') 
+}
+
+modalpBtns.forEach((modalpBtn, i) => {
+    modalpBtn.addEventListener('click', () => {
+        modalp(i)
+    })
+})
+
+modalpCloses.forEach((modalpClose) =>{
+    modalpClose.addEventListener('click', () =>{
+        modalpViews.forEach((modalpView) =>{
+            modalpView.classList.remove('active-modalp')
+        })
+    })
+})
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 
 
