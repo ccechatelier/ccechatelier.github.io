@@ -751,6 +751,17 @@ img{
   margin-right: auto;
 }
 
+.publications__modal-imgbis{
+  border-radius: .5rem;
+  height: 400px;
+  /* width: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .publications__modal-close{
   position: absolute;
   top: 0.35rem;
