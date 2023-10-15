@@ -695,6 +695,7 @@ img{
   background-color: var(--container-color);
   padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .publications__modal-publications{
@@ -762,6 +763,18 @@ img{
   margin-right: auto;
 }
 
+.publications__modal-imgter{
+  /* border-radius: .5rem; */
+  height: 250px;
+  /* width: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .publications__modal-close{
   position: absolute;
   top: 0.35rem;
@@ -1418,7 +1431,7 @@ img{
 
   .publications__container,
   .conferences__container{
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   body{
