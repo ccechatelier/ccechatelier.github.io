@@ -765,15 +765,15 @@ img{
 
 .publications__modal-imgter{
   /* border-radius: .5rem; */
-  height: 250px;
-  /* width: auto; */
+  /* height: 250px; */
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 20px;
 }
 .publications__modal-close{
   position: absolute;
@@ -1475,6 +1475,7 @@ img{
 
   .nav__menu{
     margin-left: auto;
+    margin-right: auto;
   }
 
   /* .change__theme{
