@@ -170,11 +170,11 @@
                         <div class="about__info">   
                             <div>
                                 <span class="about__info-title" id="h-index">0</span>
-                                <span class="about__info-name">H-index</span>
+                                <span class="about__info-name">H <br> index</span>
                             </div>
                             <div>
                                 <span class="about__info-title" id="i10-index">0</span>
-                                <span class="about__info-name">I10-index</span>
+                                <span class="about__info-name">I10 <br> index</span>
                             </div>
                             <div>
                                 <span class="about__info-title" id="total-citations">0</span>
@@ -192,14 +192,14 @@
                                     document.getElementById('total-citations').textContent = data.citations;
                                 })
                                 .catch(error => console.error('Error fetching profile data:', error));
-                        </script>
+                        </script>`
 
-                    </div>
+                        <div class="about__buttons">
+                            <a download="" href="assets/pdf/CV_eng_online_v2.pdf" class="button button--flex">
+                                Download CV<i class="uil uil-download-alt button__icon"></i>
+                            </a>
+                        </div>
 
-                    <div class="about__buttons">
-                        <a download="" href="assets/pdf/CV_eng_online_v2.pdf" class="button button--flex">
-                            Download CV<i class="uil uil-download-alt button__icon"></i>
-                        </a>
                     </div>
 
                 </div>
