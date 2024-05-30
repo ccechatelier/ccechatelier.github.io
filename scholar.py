@@ -3,12 +3,12 @@ import json
 
 print("[INFO] Searching for the author ...")
 # Search for the author
-search_query = scholarly.search_author('Corentin Chatelier')
-author = next(search_query)
+author = scholarly.search_author_id(id = 'JMdqN-sAAAAJ',  filled = True, sortby = "year")
+# author = next(search_query)
 
 print("[INFO] Collecting data ...")
 # Fill the author's profile
-author = scholarly.fill(author)
+# author = scholarly.fill(author)
 
 print("[INFO] Extracting data ...")
 # Extract relevant data
@@ -22,13 +22,35 @@ profile_data = {
     "publications": []
 }
 
+index = 1
 for pub in author['publications']:
     publication = scholarly.fill(pub)
-    profile_data["publications"].append({
+
+    if publication['bib'].get('conference', 'N/A') == 'N/A' and publication['bib'].get('publisher', 'N/A') != 'N/A'  and publication['bib'].get('journal', 'N/A') != 'N/A' :
+        print(index, publication['bib'].get('journal', 'N/A'), publication['bib'].get('publisher', 'N/A'), publication['bib'].get('conference', 'N/A'))
+        profile_data["publications"].append({
+        "index": index,
         "title": publication['bib']['title'],
+        "journal": publication['bib'].get('journal', 'N/A'),
+        "publisher": publication['bib'].get('publisher', 'N/A'),
+        "conference": publication['bib'].get('conference', 'N/A'),
         "year": publication['bib'].get('pub_year', 'N/A'),
         "citation": publication['num_citations']
-    })
+        })
+        index += 1
+        
+    if publication['bib'].get('conference', 'N/A') == 'N/A' and publication['bib'].get('publisher', 'N/A') == 'N/A'  and publication['bib'].get('journal', 'N/A') == 'N/A' :
+        print(index, publication['bib'].get('journal', 'N/A'), publication['bib'].get('publisher', 'N/A'), publication['bib'].get('conference', 'N/A'))
+        profile_data["publications"].append({
+        "index": index,
+        "title": publication['bib']['title'],
+        "journal": publication['bib'].get('journal', 'N/A'),
+        "publisher": publication['bib'].get('publisher', 'N/A'),
+        "conference": publication['bib'].get('conference', 'N/A'),
+        "year": publication['bib'].get('pub_year', 'N/A'),
+        "citation": publication['num_citations']
+        })
+        index += 1
     
 print("[INFO] Saving the data ...")
 # Save the data as a JSON file
