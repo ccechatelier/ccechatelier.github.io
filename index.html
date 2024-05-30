@@ -174,12 +174,12 @@
                    </div>
                 </div>
 
-                <div class="about__container">
+                <!-- <div class="about__container">
                     <h1>Welcome to My Personal Webpage</h1>
                     <h2>My Google Scholar Profile</h2>
-                    <div class="scholar-profile" id="scholar-profile">
+                    <div class="scholar-profile" id="scholar-profile"> -->
                         <!-- Data will be populated here by JavaScript -->
-                    </div>
+                    <!-- </div>
                 </div>
                 <script>
                     fetch('scholar_profile.json')
@@ -201,7 +201,7 @@
                             profileDiv.innerHTML = profileHtml;
                         })
                         .catch(error => console.error('Error fetching profile data:', error));
-                </script>
+                </script> -->
 
                 <!-- <div class="about__containerbis">
                     <h1>Welcome to My Personal Webpage</h1>
@@ -558,29 +558,31 @@
             <section class="publications section" id="publications">
                 <h2 class="section__title">Publications</h2>
                 <!-- <span class="section__subtitle">My scientific productions</span> -->
-                <span class="section__subtitle"> 
-                    <script>
-                        fetch('scholar_profile.json')
-                            .then(response => response.json())
-                            .then(data => {
-                                const profileDiv = document.getElementById('scholar-profile');
-                                let profileHtml = `
-                                    <h2>${data.name}</h2>
-                                    <p>${data.affiliation}</p>
-                                    <p>H-index: ${data.h_index}</p>
-                                    <p>I10-index: ${data.i10_index}</p>
-                                    <p>Total Citations: ${data.citations}</p>
-                                    // <h3>Publications</h3>
-                                    // <ul>`;
-                                // data.publications.forEach(pub => {
-                                //     profileHtml += `<li>${pub.title} (${pub.year}) - ${pub.citation} citations</li>`;
-                                // });
-                                // profileHtml += `</ul>`;
-                                profileDiv.innerHTML = profileHtml;
-                            })
-                            .catch(error => console.error('Error fetching profile data:', error));
-                    </script>
-                </span>
+                <span class="section__subtitle">  </span>
+                <div class="scholar-profile" id="scholar-profile">
+                    <!-- Data will be populated here by JavaScript -->
+                </div>
+                <script>
+                    fetch('scholar_profile.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            const profileDiv = document.getElementById('scholar-profile');
+                            let profileHtml = `
+                                <h2>${data.name}</h2>
+                                <p>${data.affiliation}</p>
+                                <p>H-index: ${data.h_index}</p>
+                                <p>I10-index: ${data.i10_index}</p>
+                                <p>Total Citations: ${data.citations}</p>
+                                <h3>Publications</h3>
+                                <ul>`;
+                            // data.publications.forEach(pub => {
+                            //     profileHtml += `<li>${pub.title} (${pub.year}) - ${pub.citation} citations</li>`;
+                            // });
+                            // profileHtml += `</ul>`;
+                            profileDiv.innerHTML = profileHtml;
+                        })
+                        .catch(error => console.error('Error fetching profile data:', error));
+                </script>
 
                 <div class="publications__container container grid">
                     <!--==================== Publication 17 ====================-->
