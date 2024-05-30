@@ -121,6 +121,20 @@ iframe{
 }
 
 /*==================== REUSABLE CSS CLASSES ====================*/
+.scholar__profile {
+  margin-top: 20px;
+}
+
+.scholar__profile h2 {
+  color: #4285f4;
+}
+
+.scholar__container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
 .section{
   padding: 2rem 0 4rem;
 }
