@@ -568,17 +568,11 @@
                         .then(data => {
                             const profileDiv = document.getElementById('scholar-profile');
                             let profileHtml = `
-                                <h2>${data.name}</h2>
                                 <p>${data.affiliation}</p>
                                 <p>H-index: ${data.h_index}</p>
                                 <p>I10-index: ${data.i10_index}</p>
                                 <p>Total Citations: ${data.citations}</p>
-                                // <h3>Publications</h3>
-                                // <ul>`;
-                            // data.publications.forEach(pub => {
-                            //     profileHtml += `<li>${pub.title} (${pub.year}) - ${pub.citation} citations</li>`;
-                            // });
-                            // profileHtml += `</ul>`;
+                                `;
                             profileDiv.innerHTML = profileHtml;
                         })
                         .catch(error => console.error('Error fetching profile data:', error));
