@@ -149,51 +149,50 @@
                    <img src="assets/img/about.jpg" alt="" class="about__img"> 
 
                    <div class="about__data">
-                    <p class="about__description">My research focuses on the catalytic properties of metallic and intermetallic (nano)materials for reduction and oxidation reactions, using a combination of experimental and theoretical approaches, such as Surface X-ray Diffraction, Bragg Coherent X-ray Diffraction Imaging, Molecular Statics, Molecular Dynamics, and Density Functional Theory. ORCID <a href="https://orcid.org/0000-0002-0821-8309" target="_blank">0000-0002-0821-8309</a> </p>
+                        <p class="about__description">My research focuses on the catalytic properties of metallic and intermetallic (nano)materials for reduction and oxidation reactions, using a combination of experimental and theoretical approaches, such as Surface X-ray Diffraction, Bragg Coherent X-ray Diffraction Imaging, Molecular Statics, Molecular Dynamics, and Density Functional Theory. ORCID <a href="https://orcid.org/0000-0002-0821-8309" target="_blank">0000-0002-0821-8309</a> 
+                        </p>
 
-                    <div class="about__info">
-                        <div>
-                            <span class="about__info-title">9</span>
-                            <span class="about__info-name">Years <br> experience</span>
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">9</span>
+                                <span class="about__info-name">Years <br> experience</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title">15</span>
+                                <span class="about__info-name">Published <br> articles</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title">3</span>
+                                <span class="about__info-name">Scientific <br> projects</span>
+                            </div>      
                         </div>
-                        <div>
-                            <span class="about__info-title">15</span>
-                            <span class="about__info-name">Published <br> articles</span>
-                        </div>
-                        <div>
-                            <span class="about__info-title">3</span>
-                            <span class="about__info-name">Scientific <br> projects</span>
-                        </div>      
-                    </div>
 
-                    <div class="about__info">   
-                        <div>
-                            <span class="about__info-title" id="h-index">0</span>
-                            <span class="about__info-name">H-index</span>
+                        <div class="about__info">   
+                            <div>
+                                <span class="about__info-title" id="h-index">0</span>
+                                <span class="about__info-name">H-index</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title" id="i10-index">0</span>
+                                <span class="about__info-name">I10-index</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title" id="total-citations">0</span>
+                                <span class="about__info-name">Total <br> citations</span>
+                            </div>
                         </div>
-                        <div>
-                            <span class="about__info-title" id="i10-index">0</span>
-                            <span class="about__info-name">I10-index</span>
-                        </div>
-                        <div>
-                            <span class="about__info-title" id="total-citations">0</span>
-                            <span class="about__info-name">Total <br> citations</span>
-                        </div>
-                    </div>
-                
-                </div>
 
-                <script>
-                    // JavaScript to fetch data and update the HTML
-                    fetch('scholar_profile.json')
-                        .then(response => response.json())
-                        .then(data => {
-                            document.getElementById('h-index').textContent = data.h_index;
-                            document.getElementById('i10-index').textContent = data.i10_index;
-                            document.getElementById('total-citations').textContent = data.citations;
-                        })
-                        .catch(error => console.error('Error fetching profile data:', error));
-                </script>
+                        <script>
+                            // JavaScript to fetch data and update the HTML
+                            fetch('scholar_profile.json')
+                                .then(response => response.json())
+                                .then(data => {
+                                    document.getElementById('h-index').textContent = data.h_index;
+                                    document.getElementById('i10-index').textContent = data.i10_index;
+                                    document.getElementById('total-citations').textContent = data.citations;
+                                })
+                                .catch(error => console.error('Error fetching profile data:', error));
+                        </script>
 
                     </div>
 
@@ -202,7 +201,7 @@
                             Download CV<i class="uil uil-download-alt button__icon"></i>
                         </a>
                     </div>
-                   </div>
+
                 </div>
 
                 <!-- <div class="about__container">
