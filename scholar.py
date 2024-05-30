@@ -18,6 +18,7 @@ profile_data = {
     "h_index": author.get('hindex', 'N/A'),
     "i10_index": author.get('i10index', 'N/A'),
     "citations": author.get('citedby', 'N/A'),
+    "citations_per_year": author.get('cites_per_year', 'N/A'),
     "publications": []
 }
 
