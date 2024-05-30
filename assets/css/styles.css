@@ -689,6 +689,14 @@ iframe{
   font-style: italic;
 }
 
+.publications__citations{
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
+  color: var(--first-color-second);
+  font-style: normal;
+}
+
 .publications__button{
   cursor: pointer;
   font-size: var(--small-font-size);
