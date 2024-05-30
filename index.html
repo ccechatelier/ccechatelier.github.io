@@ -568,9 +568,9 @@
                         .then(data => {
                             const profileDiv = document.getElementById('scholar-profile');
                             let profileHtml = `
-                                <h3>H-index: ${data.h_index}</h3>
-                                <h3>I10-index: ${data.i10_index}</h3>
-                                <h3>Total Citations: ${data.citations}</h3>
+                                <h3>H-index : ${data.h_index}</h3>
+                                <h3>I10-index : ${data.i10_index}</h3>
+                                <h3>Total Citations : ${data.citations}</h3>
                                 `;
                             profileDiv.innerHTML = profileHtml;
                         })
