@@ -181,7 +181,7 @@
                                 <span class="about__info-name">Total <br> citations</span>
                             </div>
                         </div>
-
+                        
                         <script>
                             // JavaScript to fetch data and update the HTML
                             fetch('scholar_profile.json')
@@ -192,7 +192,7 @@
                                     document.getElementById('total-citations').textContent = data.citations;
                                 })
                                 .catch(error => console.error('Error fetching profile data:', error));
-                        </script>`
+                        </script>
 
                         <div class="about__buttons">
                             <a download="" href="assets/pdf/CV_eng_online_v2.pdf" class="button button--flex">
