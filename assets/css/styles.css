@@ -1447,7 +1447,11 @@ iframe{
   .footer__container{
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
+  .img__container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .projects__container{
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1464,6 +1468,20 @@ iframe{
 
   .home__scroll-button{
     margin-left: 3rem;
+  }
+
+  .skills__img{
+    width: 500px;
+    border-radius: .5rem;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .qualification__img{
+    width: 500px;
+    border-radius: .5rem;
+    justify-self: center;
+    align-self: center;
   }
 
 }
