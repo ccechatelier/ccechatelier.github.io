@@ -1431,7 +1431,7 @@ iframe{
   .publications__container,
   .conferences__container,
   .footer__container{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   
   .projects__container{
