@@ -455,6 +455,13 @@ iframe{
   row-gap: 0;
 }
 
+.skills__img{
+  width: 500px;
+  border-radius: .5rem;
+  justify-self: center;
+  align-self: center;
+}
+
 .skills__header{
   display: flex;
   align-items: center;
@@ -574,6 +581,13 @@ iframe{
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2);
+}
+
+.qualification__img{
+  width: 500px;
+  border-radius: .5rem;
+  justify-self: center;
+  align-self: center;
 }
 
 .qualification__button{
