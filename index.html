@@ -1468,6 +1468,12 @@
                         .then(response => response.json())
                         .then(data => {
                             // Find the publication with index 17
+                            const publication18 = data.publications.find(pub => pub.index === 18);
+                            if (publication18) {
+                                document.getElementById('index18citations').textContent = `Citations : ${publication18.citation}`;
+                            } else {
+                                document.getElementById('index18citations').textContent = 'Citations : N/A';
+                            }
                             const publication17 = data.publications.find(pub => pub.index === 17);
                             if (publication17) {
                                 document.getElementById('index17citations').textContent = `Citations : ${publication17.citation}`;
