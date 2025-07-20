@@ -1596,6 +1596,24 @@
                     fetch('scholar_profile.json')
                         .then(response => response.json())
                         .then(data => {
+                            const publication21 = data.publications.find(pub => pub.index === 21);
+                            if (publication21) {
+                                document.getElementById('index21citations').textContent = `Citations : ${publication21.citation}`;
+                            } else {
+                                document.getElementById('index21citations').textContent = 'Citations : N/A';
+                            }                            
+                            const publication20 = data.publications.find(pub => pub.index === 20);
+                            if (publication20) {
+                                document.getElementById('index20citations').textContent = `Citations : ${publication20.citation}`;
+                            } else {
+                                document.getElementById('index20citations').textContent = 'Citations : N/A';
+                            }                            
+                            const publication19 = data.publications.find(pub => pub.index === 19);
+                            if (publication19) {
+                                document.getElementById('index19citations').textContent = `Citations : ${publication19.citation}`;
+                            } else {
+                                document.getElementById('index19citations').textContent = 'Citations : N/A';
+                            }                            
                             const publication18 = data.publications.find(pub => pub.index === 18);
                             if (publication18) {
                                 document.getElementById('index18citations').textContent = `Citations : ${publication18.citation}`;
