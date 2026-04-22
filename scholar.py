@@ -1,5 +1,9 @@
-from scholarly import scholarly
+from scholarly import scholarly, ProxyGenerator
 import json
+
+pg = ProxyGenerator()
+pg.FreeProxies()
+scholarly.use_proxy(pg)
 
 print("[INFO] Searching for the author ...")
 # Search for the author
@@ -24,8 +28,8 @@ profile_data = {
 
 index = 1
 for pub in author['publications']:
-    publication = scholarly.fill(pub)
-
+    # publication = scholarly.fill(pub)
+    publication = pub
     if publication['bib'].get('conference', 'N/A') == 'N/A' and publication['bib'].get('publisher', 'N/A') != 'N/A'  and publication['bib'].get('journal', 'N/A') != 'N/A' :
         print(index, publication['bib'].get('journal', 'N/A'), publication['bib'].get('publisher', 'N/A'), publication['bib'].get('conference', 'N/A'))
         profile_data["publications"].append({
@@ -62,10 +66,15 @@ profile_data_bis = {
     "publications": []
 }
 
+print("[INFO] Saving the data ...")
+# Save the data as a JSON file
+with open('scholar_profile_intermediaire.json', 'w') as f:
+    json.dump(profile_data, f)
+
 index -= 1
 for pub in author['publications']:
-    publication = scholarly.fill(pub)
-
+    # publication = scholarly.fill(pub)
+    publication = pub 
     if publication['bib'].get('conference', 'N/A') == 'N/A' and publication['bib'].get('publisher', 'N/A') != 'N/A'  and publication['bib'].get('journal', 'N/A') != 'N/A' :
         print(index, publication['bib'].get('journal', 'N/A'), publication['bib'].get('publisher', 'N/A'), publication['bib'].get('conference', 'N/A'))
         profile_data_bis["publications"].append({
