@@ -637,7 +637,7 @@
                                 profileDiv.innerHTML = profileHtml;
                                                         
                             // Create citations per year chart
-                            // if (data.citations_per_year && data.citations_per_year.length > 0) {
+                            if (data.citations_per_year && data.citations_per_year.length > 0) {
                                 const chartContainer = document.createElement('div');
                                 chartContainer.id = 'citations-chart';
                                 chartContainer.style.marginTop = '30px';
@@ -679,7 +679,7 @@
                                     });
                                 };
                                 document.head.appendChild(script);
-                            // }
+                            }
                         })
 
                         // .then(response => response.json())
