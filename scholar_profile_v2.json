@@ -37,15 +37,6 @@
     },
     {
       "index": 21,
-      "title": "Giant transformation strain and rotation in Ni-Pt nanoparticles caused by atomic ordering",
-      "journal": "Acta Materialia",
-      "publisher": "Pergamon",
-      "conference": "N/A",
-      "year": 2025,
-      "citation": 1
-    },
-    {
-      "index": 20,
       "title": "Kinetics of Hydrogen Absorption in Individual \u03b1-Phase Palladium Nanoparticles",
       "journal": "ACS Applied Energy Materials",
       "publisher": "American Chemical Society",
@@ -54,13 +45,22 @@
       "citation": 0
     },
     {
-      "index": 19,
+      "index": 20,
       "title": "Probing Strain in Individual Palladium Nanocrystals during Electrochemically Induced Phase Transitions",
       "journal": "Journal of the American Chemical Society",
       "publisher": "American Chemical Society",
       "conference": "N/A",
       "year": 2025,
       "citation": 8
+    },
+    {
+      "index": 19,
+      "title": "Giant transformation strain and rotation in Ni-Pt nanoparticles caused by atomic ordering",
+      "journal": "Acta Materialia",
+      "publisher": "Pergamon",
+      "conference": "N/A",
+      "year": 2025,
+      "citation": 1
     },
     {
       "index": 18,
