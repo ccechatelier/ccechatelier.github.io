@@ -628,14 +628,71 @@
                     fetch('scholar_profile_v2.json')
                         .then(response => response.json())
                         .then(data => {
-                            const profileDiv = document.getElementById('scholar-profile');
-                            let profileHtml = `
-                                <h3>H-index : ${data.h_index}</h3>
-                                <h3>I10-index : ${data.i10_index}</h3>
-                                <h3>Total Citations : ${data.citations}</h3>
-                                `;
-                            profileDiv.innerHTML = profileHtml;
+                                const profileDiv = document.getElementById('scholar-profile');
+                                let profileHtml = `
+                                    <h3>H-index : ${data.h_index}</h3>
+                                    <h3>I10-index : ${data.i10_index}</h3>
+                                    <h3>Total Citations : ${data.citations}</h3>
+                                    `;
+                                profileDiv.innerHTML = profileHtml;
+                                                        
+                            // Create citations per year chart
+                            if (data.citations_per_year && data.citations_per_year.length > 0) {
+                                const chartContainer = document.createElement('div');
+                                chartContainer.id = 'citations-chart';
+                                chartContainer.style.marginTop = '30px';
+                                chartContainer.style.width = '100%';
+                                chartContainer.style.height = '300px';
+                                profileDiv.appendChild(chartContainer);
+                                
+                                const years = data.citations_per_year.map(d => d.year);
+                                const citations = data.citations_per_year.map(d => d.citations);
+                                
+                                const ctx = document.createElement('canvas');
+                                chartContainer.appendChild(ctx);
+                                
+                                // Using Chart.js library
+                                const script = document.createElement('script');
+                                script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+                                script.onload = () => {
+                                    new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: years,
+                                            datasets: [{
+                                                label: 'Citations per Year',
+                                                data: citations,
+                                                backgroundColor: 'rgba(75, 192, 192, 0.7)',
+                                                borderColor: 'rgba(75, 192, 192, 1)',
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            maintainAspectRatio: false,
+                                            scales: {
+                                                y: {
+                                                    beginAtZero: true
+                                                }
+                                            }
+                                        }
+                                    });
+                                };
+                                document.head.appendChild(script);
+                            }
                         })
+
+                        // .then(response => response.json())
+                        // .then(data => {
+                        //     const profileDiv = document.getElementById('scholar-profile');
+                        //     let profileHtml = `
+                        //         <h3>H-index : ${data.h_index}</h3>
+                        //         <h3>I10-index : ${data.i10_index}</h3>
+                        //         <h3>Total Citations : ${data.citations}</h3>
+                        //         `;
+                        //     profileDiv.innerHTML = profileHtml;
+                        // })
+
                         .catch(error => console.error('Error fetching profile data:', error));
                 </script>
 
